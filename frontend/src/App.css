@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.hoverAnim,
+.pageNow {
+    position: relative;
+}
+
+.hoverAnim::before,
+.pageNow::before {
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 0;
+    top: 88%;
+    height: 2px;
+    animation: animateLine 0.2s forwards;
+}
+
+.pageNow {
+    font-weight: bold;
+}
+
+@keyframes animateLine {
+    100% {
+        width: 100%;
+    }
+}
